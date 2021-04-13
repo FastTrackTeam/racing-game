@@ -15,6 +15,19 @@ public class App
        carReference.doorCount = 1;
        carReference.color = "Red";
 
+       Engine engine1 = new Engine();
+       engine1.manufacture = "Ferari";
+       engine1.capacity = 3000;
+
+       carReference.engine = engine1;
+
+        System.out.println("Engine1 capacity: " + engine1.capacity);
+        System.out.println(" Car engine capacity: " + carReference.engine.capacity );
+
+        engine1.capacity = 4000;
+        System.out.println(" Car engine capacity after upgrade  " + carReference.engine.capacity );
+
+
         System.out.println("Properties of car " + carReference.name);
         System.out.println("Max speed " + carReference.maxSpeed);
         System.out.println("Fuel level " + carReference.fuelLevel);
@@ -30,6 +43,8 @@ public class App
         car2.totalTravelDistance = 190;
         car2.mileage = 59;
 
+        car2.engine = new Engine();
+        car2.engine.capacity = 2000;
 
         System.out.println("Properties of car " + car2.name);
         System.out.println("Fuel level " + car2.fuelLevel);
@@ -59,7 +74,6 @@ public class App
         System.out.println("Update  of car referenced from 2 variables "+car2.name);
 
 
-        car2 = null;
 
         System.out.println(carReference.name);
 
